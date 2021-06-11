@@ -1,0 +1,160 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/BattleWindow.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Battle.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Grass.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=4]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="TopUI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="TopUI"]
+margin_right = 270.0
+margin_bottom = 64.0
+
+[node name="ColorRect2" type="ColorRect" parent="TopUI"]
+margin_left = 4.0
+margin_right = 266.0
+margin_bottom = 60.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+margin_top = 232.0
+margin_right = 270.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+margin_right = 270.0
+margin_bottom = 248.0
+
+[node name="ColorRect2" type="ColorRect" parent="UI"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 266.0
+margin_bottom = 248.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 258.0
+margin_bottom = 248.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VBoxContainer"]
+margin_right = 246.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="UI/VBoxContainer/HBoxContainer"]
+margin_right = 110.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 110, 40 )
+size_flags_horizontal = 2
+size_flags_vertical = 6
+
+[node name="ColorRect" type="ColorRect" parent="UI/VBoxContainer/HBoxContainer/ColorRect"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 106.0
+margin_bottom = 36.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Button" parent="UI/VBoxContainer/HBoxContainer/ColorRect/ColorRect"]
+margin_right = 102.0
+margin_bottom = 32.0
+text = "Attack"
+flat = true
+
+[node name="ColorRect2" type="ColorRect" parent="UI/VBoxContainer/HBoxContainer"]
+margin_left = 136.0
+margin_right = 246.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 110, 40 )
+size_flags_horizontal = 10
+size_flags_vertical = 6
+
+[node name="ColorRect" type="ColorRect" parent="UI/VBoxContainer/HBoxContainer/ColorRect2"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 106.0
+margin_bottom = 36.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Defend" type="Button" parent="UI/VBoxContainer/HBoxContainer/ColorRect2/ColorRect"]
+margin_right = 102.0
+margin_bottom = 32.0
+text = "Defend"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/VBoxContainer"]
+margin_top = 44.0
+margin_right = 246.0
+margin_bottom = 236.0
+rect_min_size = Vector2( 246, 180 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillContainer" type="VBoxContainer" parent="UI/VBoxContainer/ScrollContainer"]
+margin_right = 246.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 246, 180 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Window" type="Control" parent="."]
+margin_top = 64.0
+margin_right = 270.0
+margin_bottom = 232.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="Window"]
+margin_right = 270.0
+margin_bottom = 168.0
+rect_min_size = Vector2( 270, 168 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemy" type="Sprite" parent="Window"]
+position = Vector2( 135, 90 )
+texture = ExtResource( 3 )
+hframes = 8
