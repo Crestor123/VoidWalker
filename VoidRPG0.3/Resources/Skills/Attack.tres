@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Resources/Skill.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/ElementSymbols/Fire.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Attack"
+icon = ExtResource( 2 )
+description = "Basic attack"
+type = "offense"
+stat = "strength"
+targetStat = "health"
+element = ""
+status = ""
+cost = 1
+turns = 0
+baseDamage = 5
+multiplier = 1.0
+chance = 1.0

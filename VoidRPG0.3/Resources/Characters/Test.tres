@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Resources/Character.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/ElementSymbols/Earth.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Test"
+icon = ExtResource( 2 )
+health = 10
+mana = 10
+strength = 10
+dexterity = 10
+constitution = 10
+intelligence = 10
+wisdom = 10
+charisma = 10
+skills = [  ]
