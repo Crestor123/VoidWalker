@@ -1,0 +1,28 @@
+Win State:
+	Killer - Get away with the crime
+	All Other Players - Discover who the killer is
+
+Game Flow:
+	5-10 minutes for all players to walk around location
+		All objects can be picked up and moved to different containers, and keep track of fingerprints/bloodstains and its position
+		Any objects that can be used as weapons are tagged as such
+		(Each player has a "secret" to keep?)
+		The killer uses this time to plan
+		The other players must investigate and familiarize themselves with the layout
+	The killer can pause time for 3 minutes to carry out the plan
+		The other players cannot see anything that the killer does within this time
+	10-15 minutes for all players to gather evidence
+		Nothing can be moved during this time, and fingerprints cannot be added to objects
+		Each player collects evidence into a personal log, which includes all known information about the object
+	Indefinite time to argue
+		The players compare their findings in an attempt to discover the killer
+		This phase ends when all players have voted on the killer's identity, or, if no consensus can be reached, to continue the investigation
+			If the investigation continues, the players have 5 more minutes to find evidence
+				The killer is now able to tamper with the crime scene, though any previously collected evidence is not altered
+	If the players discover the identity of the killer, they win
+	Otherwise, the killer wins
+
+Implementation
+	Rooms
+		Containers - Maximum number of objects
+			Objects - Size, Weapon?
